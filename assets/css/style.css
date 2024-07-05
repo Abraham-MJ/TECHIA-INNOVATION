@@ -1233,16 +1233,38 @@ p {
   position: relative;
 }
 
-.subscribe-form input {
-  border: 2px solid #e1e1e1;
-  height: 65px;
-  padding: 0 30px;
+.subscribe-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.subscribe-form input,
+textarea {
+  border: 1px solid #e1e1e1;
+  height: 50px;
+  padding: 0 10px;
   border-radius: 5px;
   width: 100%;
   color: #2e2e2e;
 }
 
+.subscribe-form textarea {
+  resize: none;
+  height: 135px;
+}
+
+.subscribe-form textarea::placeholder {
+  opacity: 1;
+  color: #b9b9b9;
+}
+
 .subscribe-form input::-webkit-input-placeholder {
+  opacity: 1;
+  color: #b9b9b9;
+}
+
+.subscribe-form textarea:-ms-input-placeholder {
   opacity: 1;
   color: #b9b9b9;
 }
@@ -1282,12 +1304,8 @@ p {
 }
 
 .subscribe-form button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  border-radius: 0;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  margin-top: 10px;
+  border-radius: 10px;
   height: 65px;
   line-height: 65px;
   background: -webkit-gradient(
